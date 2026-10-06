@@ -1,0 +1,32 @@
+# BUSCO version is: 5.7.1 
+# The lineage dataset is: brassicales_odb10 (Creation date: 2024-01-08, number of genomes: 10, number of BUSCOs: 4596)
+# Summarized benchmarking in BUSCO notation for file /data/users/gmaringarcia/assembly_annotation_course/assemblies/lja_K3001/assembly.fasta
+# BUSCO was run in mode: euk_genome_min
+# Gene predictor used: miniprot
+
+	***** Results: *****
+
+	C:99.9%[S:98.8%,D:1.1%],F:0.1%,M:0.0%,n:4596,E:0.8%	   
+	4590	Complete BUSCOs (C)	(of which 39 contain internal stop codons)		   
+	4539	Complete and single-copy BUSCOs (S)	   
+	51	Complete and duplicated BUSCOs (D)	   
+	5	Fragmented BUSCOs (F)			   
+	1	Missing BUSCOs (M)			   
+	4596	Total BUSCO groups searched		   
+
+Assembly Statistics:
+	615	Number of scaffolds
+	615	Number of contigs
+	141227647	Total length
+	0.000%	Percent gaps
+	14 MB	Scaffold N50
+	14 MB	Contigs N50
+
+
+Dependencies and versions:
+	hmmsearch: 3.1
+	bbtools: 39.01
+	miniprot_index: 0.13-r248
+	miniprot_align: 0.13-r248
+	python: sys.version_info(major=3, minor=7, micro=12, releaselevel='final', serial=0)
+	busco: 5.7.1
