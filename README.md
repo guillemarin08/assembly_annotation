@@ -32,6 +32,7 @@ assembly_annotation/
     ├── merqury/
     ├── mummer/
     └── quast/
+```
 
 ## Workflow Structure
 The `scripts/` directory includes sequentially numbered SLURM job scripts covering the entire pipeline:
