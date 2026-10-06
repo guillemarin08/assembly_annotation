@@ -8,8 +8,9 @@
 #SBATCH --error=/data/users/gmaringarcia/assembly_annotation_course/assemblies/Trinity/error_%j.e
 
 WORKDIR="/data/users/gmaringarcia/assembly_annotation_course"
-RNA1="${WORKDIR}/RNAseq_Sha/ERR754081_1.fastq.gz"
-RNA2="${WORKDIR}/RNAseq_Sha/ERR754081_2.fastq.gz"
+# USING TRIMMED READS FOR ASSEMBLY
+RNA1="${WORKDIR}/read_QC/fastp/RNAseq_trimmed_1.fastq.gz"
+RNA2="${WORKDIR}/read_QC/fastp/RNAseq_trimmed_2.fastq.gz"
 OUTDIR="${WORKDIR}/assemblies/Trinity"
 
 module load Trinity
