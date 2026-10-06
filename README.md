@@ -1,7 +1,7 @@
 # Arabidopsis thaliana (Nemrut-1) - Assembly and Annotation
 
 **Author:** Guillermo Marín García
-**Course:** Assembly and Annotation Course (Universities of Bern)
+**Course:** Assembly and Annotation Course (University of Bern)
 **Accession:** Nemrut-1
 
 ## Overview
