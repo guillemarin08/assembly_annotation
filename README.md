@@ -9,8 +9,6 @@ This repository contains the bash/SLURM scripts and main evaluation results for 
 
 ## Project Structure
 
-## Project Structure
-
 ```text
 assembly_annotation/
 ├── README.md
