@@ -11,7 +11,7 @@ This repository contains the bash/SLURM scripts and main evaluation results for 
 
 assembly_annotation/
 ├── README.md                 # Project overview and main findings
-├── scripts/                  # SLURM bash scripts for the pipeline
+├── scripts/                  
 │   ├── 01_run_fastqc.sh      # Initial read quality control (PacBio & RNA-seq)
 │   ├── 02_run_fastp.sh       # RNA-seq trimming and filtering
 │   ├── 03_run_jellyfish.sh   # K-mer counting and size estimation
@@ -23,7 +23,7 @@ assembly_annotation/
 │   ├── 09_run_busco.sh       # Gene completeness evaluation (brassicales_odb10)
 │   ├── 10_run_merqury.sh     # K-mer based evaluation (QV & completeness)
 │   └── 11_run_mummer.sh      # Whole genome alignment and dotplots
-└── results/                  # Main evaluation outputs
+└── results/                  
     ├── qc/                   # FastQC and fastp HTML reports
     ├── busco/                # Short summary texts for all assemblies
     ├── merqury/              # Copy-number spectra PNG plots
