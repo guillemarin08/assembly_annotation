@@ -13,17 +13,17 @@ RNA1="${WORKDIR}/RNAseq_Sha/ERR754081_1.fastq.gz"
 RNA2="${WORKDIR}/RNAseq_Sha/ERR754081_2.fastq.gz"
 OUTDIR="${WORKDIR}/read_QC/fastp"
 
-# Cargar modulo fastp
+# Load fastp module
 module load fastp
 
-# Filtrar y recortar RNA-seq de Illumina
+# Filter and trimm RNA-seq reads from Illumina
 fastp -i $RNA1 -I $RNA2 \
       -o ${OUTDIR}/RNAseq_trimmed_1.fastq.gz -O ${OUTDIR}/RNAseq_trimmed_2.fastq.gz \
       --thread 4 \
       --html ${OUTDIR}/RNAseq_fastp.html \
       --json ${OUTDIR}/RNAseq_fastp.json
 
-# Obtener estadisticas de PacBio sin filtrar
+# Obtain statistics from PacBio without filter
 fastp -i $PACBIO \
       -o ${OUTDIR}/PacBio_unfiltered.fastq.gz \
       --disable_quality_filtering --disable_length_filtering \

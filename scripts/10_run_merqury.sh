@@ -17,12 +17,17 @@ LJA="${WORKDIR}/assemblies/lja_K3001/assembly.fasta"
 
 export MERQURY="/usr/local/share/merqury"
 
-# 1. Hifiasm en su propia carpeta
+# 1. Hifiasm 
 mkdir -p ${OUTDIR}/hifiasm_eval
 cd ${OUTDIR}/hifiasm_eval
 apptainer exec --bind /data /containers/apptainer/merqury_1.3.sif merqury.sh $MERYL_DB $HIFIASM hifiasm_merqury
 
-# 2. LJA en su propia carpeta
+# 2. LJA 
 mkdir -p ${OUTDIR}/lja_eval
 cd ${OUTDIR}/lja_eval
 apptainer exec --bind /data /containers/apptainer/merqury_1.3.sif merqury.sh $MERYL_DB $LJA lja_merqury
+
+# 3. Flye
+mkdir -p ${OUTDIR}/flye_eval
+cd ${OUTDIR}/flye_eval
+apptainer exec --bind /data /containers/apptainer/merqury_1.3.sif merqury.sh $MERYL_DB $FLYE flye_merqury

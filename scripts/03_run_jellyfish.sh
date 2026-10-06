@@ -11,11 +11,11 @@ WORKDIR="/data/users/gmaringarcia/assembly_annotation_course"
 PACBIO=$(ls ${WORKDIR}/Nemrut-1/*.fastq.gz)
 OUTDIR="${WORKDIR}/read_QC/kmer_counting"
 
-# Cargar modulo Jellyfish
+# Load Jellyfish module
 module load Jellyfish
 
-# Contar k-mers canónicos (-C), usar hash de 5Gb (-s 5G) y 4 hilos (-t 4)
+# Count canonic k-mers (-C), use 5Gb (-s 5G) hash and 4 threads (-t 4)
 jellyfish count -C -m 21 -s 5G -t 4 -o ${OUTDIR}/reads.jf <(zcat $PACBIO)
 
-# Generar el histograma
+# Generate the histogram
 jellyfish histo -t 4 ${OUTDIR}/reads.jf > ${OUTDIR}/reads.histo
